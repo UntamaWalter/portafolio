@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Walter Samuel Untama Rivas | Portafolio</title>
+  <link rel="stylesheet" href="estilos.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <span class="name">Walter Samuel</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="proyectos.html">Proyectos</a></li>
+        <li><a href="trabajos.html">Trabajos</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <button class="btn-contact" onclick="document.getElementById('contacto').scrollIntoView({behavior: 'smooth'})">
+        <i class="fas fa-paper-plane"></i> Contáctame
+      </button>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="inicio" class="hero">
+    <div class="hero-content">
+      <div class="profile-container">
+        <img src="imagenes/perfil.jpeg" alt="Walter Samuel Untama Rivas" class="profile-pic">
+      </div>
+      <div class="hero-text">
+        <h1 class="typing">Walter Samuel Untama Rivas</h1>
+        <h2>Estudiante de Ingeniería de Sistemas e Informática</h2>
+        <p>Me apasiona el análisis, diseño y desarrollo de sistemas
+            informáticos y software.
+            Tengo experiencia con AppInventor para construir
+            aplicaciones móviles. HTML, CSS, Javascript, y WordPress
+            para construir sitios webs amigables.
+            Mi meta es construir una carrera estable y servir a la mayor
+            cantidad de personas con la ayuda de lo que cree con mis
+            conocimientos.
+            Encuéntrame en </p>
+        <div class="hero-buttons">
+          <a href="https://github.com" target="_blank" class="btn-github">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+          <button class="btn-primary" onclick="document.getElementById('contacto').scrollIntoView({behavior: 'smooth'})">
+            <i class="fas fa-envelope"></i> Contáctame
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="section contact">
+    <h2 class="section-title">¡Hablemos!</h2>
+    <form id="contact-form">
+      <input type="text" placeholder="Tu nombre" required>
+      <input type="email" placeholder="Correo electrónico" required>
+      <textarea placeholder="Tu mensaje..." required></textarea>
+      <button type="submit" class="btn-primary">Enviar Mensaje</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 Walter Samuel Untama Rivas. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

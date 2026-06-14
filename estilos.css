@@ -1,0 +1,242 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.7;
+  color: #ffffff;           /* Texto blanco principal */
+  background: #0f0f1a;
+  overflow-x: hidden;
+}
+
+/* ===================== NAVBAR ===================== */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(15, 15, 26, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  padding: 1rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(74, 159, 255, 0.2);
+}
+
+.logo .name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #4a9fff;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: #e0e0e0;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #4a9fff;
+}
+
+/* ===================== BOTONES ===================== */
+.btn-contact, .btn-primary {
+  background: linear-gradient(45deg, #4a9fff, #3b8be6);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  font-weight: 600;
+}
+
+.btn-contact:hover, .btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(74, 159, 255, 0.4);
+}
+
+/* ===================== HERO ===================== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0f0f1a, #1a2540);
+  color: white;
+  padding: 0 5%;
+  position: relative;
+}
+
+.hero-content {
+  max-width: 1100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.profile-pic {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 6px solid #4a9fff;
+  box-shadow: 0 0 40px rgba(74, 159, 255, 0.5);
+  transition: transform 0.5s;
+}
+
+.profile-pic:hover {
+  transform: scale(1.08) rotate(5deg);
+}
+
+.hero-text h1 {
+  font-size: 3.2rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.hero-text h2 {
+  font-size: 1.6rem;
+  color: #4a9fff;
+  margin-bottom: 20px;
+}
+
+/* ===================== SECCIONES ===================== */
+.section {
+  padding: 100px 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 60px;
+  color: #ffffff;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  width: 80px;
+  height: 4px;
+  background: #4a9fff;
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.09);
+  border-radius: 20px;
+  padding: 30px;
+  transition: all 0.4s ease;
+  border: 1px solid rgba(74, 159, 255, 0.15);
+  color: #ffffff;               /* Texto blanco en tarjetas */
+}
+
+.card:hover {
+  transform: translateY(-15px);
+  background: rgba(255, 255, 255, 0.14);
+  box-shadow: 0 20px 40px rgba(74, 159, 255, 0.2);
+}
+
+.card h3 {
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.card p {
+  color: #e0e0e0;
+  margin-bottom: 15px;
+}
+
+.btn-small {
+  color: #4a9fff;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 15px;
+  display: inline-block;
+  transition: color 0.3s;
+}
+
+.btn-small:hover {
+  color: #ffffff;
+}
+
+/* ===================== CONTACTO ===================== */
+.contact form {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact input, .contact textarea {
+  padding: 16px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(74, 159, 255, 0.3);
+  border-radius: 12px;
+  color: #ffffff;
+  font-size: 1.05rem;
+}
+
+.contact input::placeholder, .contact textarea::placeholder {
+  color: #bbbbbb;
+}
+
+/* ===================== FOOTER ===================== */
+footer {
+  background: #0a0a12;
+  color: #aaaaaa;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+/* ===================== ANIMACIONES ===================== */
+@keyframes fadeInUp {
+  from { 
+    opacity: 0; 
+    transform: translateY(50px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+.card, .hero-content > * {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 768px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .nav-links {
+    gap: 1.2rem;
+    font-size: 0.95rem;
+  }
+}
